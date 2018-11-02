@@ -13,7 +13,8 @@ class NewPost extends Component {
     }
 
     componentDidMount() {
-      console.log(this.props);
+        // If unauth => this.props.history.replace('/posts');
+        console.log(this.props);
     }
     
 
@@ -26,7 +27,8 @@ class NewPost extends Component {
         Axios.post('/posts', post)
             .then(response => {
                 console.log(response);
-                this.setState({submitted: true});
+                //this.props.history.replace('/posts')
+                //this.setState({submitted: true});
             });
     }
 
